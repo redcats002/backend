@@ -3,6 +3,15 @@
     "dialect": "sqlite",
     "storage": "./dev.sqlite3"
   },
+  "staging": {
+    "dialect": "mysql",
+    "database": "cmstock",
+    "username": "root",
+    "password": "rootpassword",
+    "host": "localhost",
+    "port": 3306,
+    "operatorsAliases": 0
+  },
   "test": {
     "username": "root",
     "password": null,
