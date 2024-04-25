@@ -8,10 +8,11 @@ const cors = require("cors");
 //   optionsSuccessStatus: 200,
 // };
 
+app.use("/images", express.static("images"));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(require("./controller"));
+app.use("/api", require("./controller"));
 
 const PORT = process.env.PORT || 1150;
 app.listen(PORT, () => {

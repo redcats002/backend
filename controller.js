@@ -9,7 +9,7 @@ const { where } = require("sequelize");
 router.get("/products", async (req, res) => {
   try {
     const result = await db.Product.findAll({
-      order: [["id", "ASC"]],
+      order: [["id", "DESC"]],
     });
     res.status(200).json(result);
   } catch (error) {
